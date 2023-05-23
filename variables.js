@@ -5,14 +5,19 @@ const prfWikiPath =
 const rwTexturesPath = "https://rimworldwiki.com/images/";
 const rwWikiPath = "https://rimworldwiki.com/wiki/";
 
+
+//Lists Images of Items and the Corrosponding Wiki Pages
+//As the names of the wiki paths are not consistant we need to manually select them
+//TODO Maybe add a scaper?
+//TODO Autodetect for PRF / own stuff
 const itemDict = {
   PRFMachineFrame: {
     src: `${prfTexturesPath}Common/MachineFrame.png?raw=true`,
     link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
   },
   Steel: {
-    src: `${prfTexturesPath}c/c9/Steel.png`,
-    link: `${prfTexturesPath}Steel`
+    src: `${rwTexturesPath}4/4d/Steel_b.png`,
+    link: `${rwWikiPath}Steel`
   },
   ComponentIndustrial: {
     src: `${prfTexturesPath}4/40/Component.png`,
@@ -65,6 +70,10 @@ const itemDict = {
   AIPersonaCore: {
     src: `${prfTexturesPath}f/f2/AI_persona_core.png`,
     link: `${prfTexturesPath}AI_persona_core`
+  },
+  Silver:{
+    src: `${rwTexturesPath}5/57/Silver_c.png`,
+    link: `${rwWikiPath}Silver`
   }
 };
 
