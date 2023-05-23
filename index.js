@@ -255,23 +255,13 @@ async function asyncForEach(array, callback) {
   }
 }
 
-const main = async () => {
-  const myFetch = await promiseFetch(
-    // "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Assemblers.xml"
-    // "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Miners.xml"
-    // "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Storage.xml"
-    // "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Industry.xml"
-    // "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Cultivators.xml"
-    // "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_AnimalStations.xml"
-    // "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Cooking.xml"
-    // "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_battery.xml"
-    // "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Common.xml"
-    // "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Transport.xml"
-    // "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Misc.xml"
-    // "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Lighting_FloorLamp.xml"
-    // "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Items/Things_Schematic.xml"
-    "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Items/Things_Common.xml"
-  );
+async function GenerateOutputFor(XML_File_URL){
+  console.log("running for:" + XML_File_URL);
+  const regex = /\/(\w+?)\.xml$/gm;
+  const myFetch = await promiseFetch(XML_File_URL);
+  const filename = regex.exec(XML_File_URL)[1] + ".md";
+
+
   let fileData = "";
   const { meta, body: xmlData } = myFetch;
   if (parser.validate(xmlData) !== true) {
@@ -298,9 +288,32 @@ const main = async () => {
       fileData += await printMarkdownTable(base, td);
     }
   });
-  fs.writeFile("output.md", fileData, () => {
-    console.log("file written");
+  fs.writeFile("output/" + filename, fileData, () => {
+    console.log(filename + " written for: " + XML_File_URL);
   });
+}
+
+const main = async () => {
+  const Urls = [
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Assemblers.xml",
+     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Miners.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Industry.xml",
+     //"https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Storage.xml", //Not working with that one
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Cultivators.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_AnimalStations.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Cooking.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_battery.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Common.xml",
+     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Transport.xml",
+     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Misc.xml",
+     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Lighting_FloorLamp.xml",
+     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Items/Things_Schematic.xml",
+     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Items/Things_Common.xml"
+  ]
+
+  for (let i = 0; i < Urls.length; i++) {
+    await GenerateOutputFor(Urls[i]);
+  }
 };
 
 main();
