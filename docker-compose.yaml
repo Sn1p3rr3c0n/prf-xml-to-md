@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  converterxmlmd:
+    build: .
+    volumes:
+      - ./App:/App

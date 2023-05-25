@@ -1,2 +1,3 @@
-node_modules
-output.md
+App/node_modules
+App/output/*
+
