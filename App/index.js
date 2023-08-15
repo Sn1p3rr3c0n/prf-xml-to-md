@@ -45,6 +45,7 @@ const getBasePowerConsumption = comps => {
   if (!comps) return 0;
   const { li } = comps;
   let bpc = 0;
+  if(!li ) return  0;
   if (!li.forEach) {
     if (!li.basePowerConsumption) return 0;
     return li.basePowerConsumption;
@@ -61,6 +62,7 @@ const getBasePowerStorage = comps => {
   if (!comps) return 0;
   const { li } = comps;
   let bpc = 0;
+  if (!li) return 0;
   if (!li.forEach) {
     if (!li.storedEnergyMax) return 0;
     return li.storedEnergyMax;
@@ -296,19 +298,19 @@ async function GenerateOutputFor(XML_File_URL){
 const main = async () => {
   const Urls = [
      "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Assemblers.xml",
-     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Miners.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Miners.xml",
      "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Industry.xml",
-     //"https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Storage.xml", //Not working with that one
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Storage.xml",
      "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Cultivators.xml",
      "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_AnimalStations.xml",
      "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Cooking.xml",
      "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_battery.xml",
      "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Common.xml",
-     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Transport.xml",
-     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Buildings_Misc.xml",
-     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Buildings/Lighting_FloorLamp.xml",
-     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Items/Things_Schematic.xml",
-     "https://github.com/zymex22/Project-RimFactory-Revived/raw/master/Defs/ThingDefs_Items/Things_Common.xml"
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Miners.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Buildings_Misc.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Buildings/Lighting_FloorLamp.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Items/Things_Schematic.xml",
+     "https://raw.githubusercontent.com/zymex22/Project-RimFactory-Revived/master/Defs/ThingDefs_Items/Things_Common.xml"
   ]
 
   for (let i = 0; i < Urls.length; i++) {
