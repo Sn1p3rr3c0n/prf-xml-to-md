@@ -11,17 +11,53 @@ const rwWikiPath = "https://rimworldwiki.com/wiki/";
 //TODO Maybe add a scaper?
 //TODO Autodetect for PRF / own stuff
 const itemDict = {
-  PRFMachineFrame: {
+  PRF_MachineFrame_II: {
     src: `${prfTexturesPath}Common/MachineFrame.png?raw=true`,
     link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+  },
+  PRF_ElectronicChip_I: {
+    src: `${prfTexturesPath}Common/WeakAICore.png?raw=true`,
+    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+  },
+  PRF_ElectronicChip_II: {
+    src: `${prfTexturesPath}Common/AdvancedAICore.png?raw=true`,
+    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+  },
+  PRF_ElectronicChip_III: {
+    src: `${prfTexturesPath}Common/UltraAiCore.png?raw=true`,
+    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+  },
+  PRF_MachineFrame_I: {
+    src: `${prfTexturesPath}Common/MachineFrameSmall.png?raw=true`,
+    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+  },
+  PRF_MachineFrame_III: {
+    src: `${prfTexturesPath}Common/MachineFrameLarge.png?raw=true`,
+    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+  },
+  PRF_DataDisk: {
+    src: `${prfTexturesPath}SAL3/datadisk.png?raw=true`,
+    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+  },
+  PRF_DroneModule: {
+    src: `${prfTexturesPath}Common/DroneModule.png?raw=true`,
+    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+  },
+  PRF_RoboticArm:{
+    src: `${prfTexturesPath}Common/RoboticArm.png?raw=true`,
+    link: `${prfWikiPath}/Construction-and-Crafting-Resources#RoboticArm`
   },
   Steel: {
     src: `${rwTexturesPath}4/4d/Steel_b.png`,
     link: `${rwWikiPath}Steel`
   },
   ComponentIndustrial: {
-    src: `${prfTexturesPath}4/40/Component.png`,
-    link: `${prfTexturesPath}Component`
+    src: `https://rimworldwiki.com/images/4/40/Component.png`,
+    link: `https://rimworldwiki.com/wiki/Component`
+  },
+  ComponentSpacer: {
+    src: `https://rimworldwiki.com/images/d/d6/Advanced_component.png`,
+    link: `https://rimworldwiki.com/wiki/Advanced_component`
   },
   RimFactory_Data_Disk: {
     src: `${prfTexturesPath}SAL3/datadisk.png?raw=true`,
