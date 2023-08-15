@@ -47,18 +47,6 @@ const itemDict = {
     src: `${prfTexturesPath}Common/RoboticArm.png?raw=true`,
     link: `${prfWikiPath}/Construction-and-Crafting-Resources#RoboticArm`
   },
-  Steel: {
-    src: `${rwTexturesPath}4/4d/Steel_b.png`,
-    link: `${rwWikiPath}Steel`
-  },
-  ComponentIndustrial: {
-    src: `https://rimworldwiki.com/images/4/40/Component.png`,
-    link: `https://rimworldwiki.com/wiki/Component`
-  },
-  ComponentSpacer: {
-    src: `https://rimworldwiki.com/images/d/d6/Advanced_component.png`,
-    link: `https://rimworldwiki.com/wiki/Advanced_component`
-  },
   RimFactory_Data_Disk: {
     src: `${prfTexturesPath}SAL3/datadisk.png?raw=true`,
     link: `${prfWikiPath}/Construction-and-Crafting-Resources#recipe-data-disk`
@@ -66,10 +54,6 @@ const itemDict = {
   PRFRoboticArm: {
     src: `${prfTexturesPath}Common/RoboticArm.png?raw=true`,
     link: `${prfWikiPath}/Construction-and-Crafting-Resources#robotic-arm`
-  },
-  Plasteel: {
-    src: `${prfTexturesPath}c/c5/Plasteel.png`,
-    link: `${prfTexturesPath}Plasteel`
   },
   PRFWeakAIChip: {
     src: `${prfTexturesPath}Common/WeakAICore.png?raw=true`,
@@ -83,29 +67,48 @@ const itemDict = {
     src: `${prfTexturesPath}Common/MachineFrameSmall.png?raw=true`,
     link: `${prfWikiPath}/Construction-and-Crafting-Resources#simple-machine-frame`
   },
-  WoodLog: {
-    src: `${prfTexturesPath}d/df/Wood.png`,
-    link: `${prfTexturesPath}Wood`
-  },
-  Gold: {
-    src: `${prfTexturesPath}1/10/Gold.png`,
-    link: `${prfTexturesPath}Gold`
-  },
-  Uranium: {
-    src: `${prfTexturesPath}3/31/Uranium.png`,
-    link: `${prfTexturesPath}Uranium`
-  },
-  Hay: {
-    src: `${prfTexturesPath}a/aa/Hay.png`,
-    link: `${prfTexturesPath}Hay`
-  },
   PRFDroneModule: {
     src: `${prfTexturesPath}Common/DroneModule.png?raw=true`,
     link: `${prfWikiPath}/Construction-and-Crafting-Resources#drone-module`
   },
+  /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  +        RW Base Game
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+  Plasteel: {
+    src: `${rwTexturesPath}8/8c/Plasteel_c.png`,
+    link: `${rwWikiPath}Plasteel`
+  },
+  Steel: {
+    src: `${rwTexturesPath}4/4d/Steel_b.png`,
+    link: `${rwWikiPath}Steel`
+  },
+  ComponentIndustrial: {
+    src: `${rwTexturesPath}4/40/Component.png`,
+    link: `${rwWikiPath}Component`
+  },
+  ComponentSpacer: {
+    src: `${rwTexturesPath}d/d6/Advanced_component.png`,
+    link: `${rwWikiPath}Advanced_component`
+  },
+  WoodLog: {
+    src: `${rwTexturesPath}d/df/Wood.png`,
+    link: `${rwWikiPath}Wood`
+  },
+  Gold: {
+    src: `${rwTexturesPath}1/10/Gold.png`,
+    link: `${rwWikiPath}Gold`
+  },
+  Uranium: {
+    src: `${rwTexturesPath}3/31/Uranium.png`,
+    link: `${rwWikiPath}Uranium`
+  },
+  Hay: {
+    src: `${rwTexturesPath}2/25/Hay_a.png`,
+    link: `${rwWikiPath}Hay`
+  },
   AIPersonaCore: {
-    src: `${prfTexturesPath}f/f2/AI_persona_core.png`,
-    link: `${prfTexturesPath}AI_persona_core`
+    src: `${rwTexturesPath}f/f2/AI_persona_core.png`,
+    link: `${rwWikiPath}AI_persona_core`
   },
   Silver:{
     src: `${rwTexturesPath}5/57/Silver_c.png`,
