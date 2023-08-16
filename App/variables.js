@@ -11,65 +11,41 @@ const rwWikiPath = "https://rimworldwiki.com/wiki/";
 //TODO Maybe add a scaper?
 //TODO Autodetect for PRF / own stuff
 const itemDict = {
-  PRF_MachineFrame_II: {
-    src: `${prfTexturesPath}Common/MachineFrame.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
-  },
-  PRF_ElectronicChip_I: {
-    src: `${prfTexturesPath}Common/WeakAICore.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
-  },
-  PRF_ElectronicChip_II: {
-    src: `${prfTexturesPath}Common/AdvancedAICore.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
-  },
-  PRF_ElectronicChip_III: {
-    src: `${prfTexturesPath}Common/UltraAiCore.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
-  },
   PRF_MachineFrame_I: {
     src: `${prfTexturesPath}Common/MachineFrameSmall.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#smallm-machine-frame`
+  },
+  PRF_MachineFrame_II: {
+    src: `${prfTexturesPath}Common/MachineFrame.png?raw=true`,
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#medium-machine-frame`
   },
   PRF_MachineFrame_III: {
     src: `${prfTexturesPath}Common/MachineFrameLarge.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#advanced-machine-frame`
+  },
+  PRF_ElectronicChip_I: {
+    src: `${prfTexturesPath}Common/WeakAICore.png?raw=true`,
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#basic-ai-chip`
+  },
+  PRF_ElectronicChip_II: {
+    src: `${prfTexturesPath}Common/AdvancedAICore.png?raw=true`,
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#advanced-ai-core`
+  },
+  PRF_ElectronicChip_III: {
+    src: `${prfTexturesPath}Common/UltraAiCore.png?raw=true`,
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#qubit-processor`
   },
   PRF_DataDisk: {
     src: `${prfTexturesPath}SAL3/datadisk.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#audio-tape-reel`
   },
   PRF_DroneModule: {
     src: `${prfTexturesPath}Common/DroneModule.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#machine-frame`
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#uav-packed`
   },
   PRF_RoboticArm:{
     src: `${prfTexturesPath}Common/RoboticArm.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#RoboticArm`
-  },
-  RimFactory_Data_Disk: {
-    src: `${prfTexturesPath}SAL3/datadisk.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#recipe-data-disk`
-  },
-  PRFRoboticArm: {
-    src: `${prfTexturesPath}Common/RoboticArm.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#robotic-arm`
-  },
-  PRFWeakAIChip: {
-    src: `${prfTexturesPath}Common/WeakAICore.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#weak-ai-chip`
-  },
-  PRFMachineFrameLarge: {
-    src: `${prfTexturesPath}Common/MachineFrameLarge.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#adv-machine-frame`
-  },
-  PRFMachineFrameSmall: {
-    src: `${prfTexturesPath}Common/MachineFrameSmall.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#simple-machine-frame`
-  },
-  PRFDroneModule: {
-    src: `${prfTexturesPath}Common/DroneModule.png?raw=true`,
-    link: `${prfWikiPath}/Construction-and-Crafting-Resources#drone-module`
+    link: `${prfWikiPath}Construction-and-Crafting-Resources#robotic-arm`
   },
   /*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
   +        RW Base Game
